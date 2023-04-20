@@ -150,6 +150,29 @@ namespace Examen
 
         }
 
+        private void PlayerCreation()
+        {
+            string name;
+            float experience;
+            int level;
+            float money;
+
+            Console.WriteLine("Introducir el nombre:");
+            name = Console.ReadLine();
+            Console.WriteLine("Introducir la experiencia:");
+            experience = float.Parse(Console.ReadLine());
+            Console.WriteLine("Introducir el nivel:");
+            level = int.Parse(Console.ReadLine());
+            Console.WriteLine("Introducir el dinero:");
+            money = float.Parse(Console.ReadLine());
+
+            Player player = new Player(name, experience, level, money);
+
+
+        }
+
+
+
 
         private void EndingMenu()
         {
