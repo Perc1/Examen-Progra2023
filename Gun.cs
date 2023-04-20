@@ -8,7 +8,7 @@ namespace Examen
 {
     class Gun : RangeWeapon
     {
-        public Gun(string name, float damage, float attackSpeed, float price, Ammo ammo) : base(name, damage, attackSpeed, price, ammo)
+        public Gun(string name, float damage, float attackSpeed, float price, Ammo ammo, string itemtype) : base(name, damage, attackSpeed, price, ammo,itemtype)
         {
         }
     }

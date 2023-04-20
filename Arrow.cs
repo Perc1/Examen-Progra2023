@@ -8,7 +8,7 @@ namespace Examen
 {
     class Arrow : Ammo
     {
-        public Arrow(float damage, float price) : base(damage, price)
+        public Arrow(string name,float damage, float price,string itemtype) : base(name,damage, price,itemtype)
         {
         }
     }

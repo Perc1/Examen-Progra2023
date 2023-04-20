@@ -6,14 +6,14 @@ using System.Threading.Tasks;
 
 namespace Examen
 {
-    class NPC
+    abstract class NPC
     {
         protected string name;
         protected float life;
         protected string type;
 
 
-        public Npc(string name, float life, string type)
+        public NPC(string name, float life, string type)
         {
             this.name = name;
             this.life = life;

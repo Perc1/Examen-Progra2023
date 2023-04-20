@@ -58,6 +58,7 @@
       <DependentUpon>Form1.cs</DependentUpon>
     </Compile>
     <Compile Include="Gun.cs" />
+    <Compile Include="IDetails.cs" />
     <Compile Include="Item.cs" />
     <Compile Include="MeleeWeapon.cs" />
     <Compile Include="Menu.cs" />

@@ -54,6 +54,7 @@ namespace Examen
             float damage;
             float attackSpeed;
             float price;
+            string itemtype;
 
             Console.WriteLine("Introducir el nombre:");
             name = Console.ReadLine();
@@ -63,8 +64,10 @@ namespace Examen
             attackSpeed = float.Parse(Console.ReadLine());
             Console.WriteLine("Introducir el precio:");
             price = float.Parse(Console.ReadLine());
+            Console.WriteLine("Tipo de item:");
+            itemtype = Console.ReadLine();
 
-            weapons.Add(new Sword(name, damage, attackSpeed, price));
+            weapons.Add(new Sword(name, damage, attackSpeed, price,itemtype));
 
 
         }
@@ -77,6 +80,9 @@ namespace Examen
             float price;
             float ammoDamage;
             float ammoPrice;
+            string itemtype;
+            string ammoname;
+            string ammoitemtype;
 
             Console.WriteLine("Introducir el nombre:");
             name = Console.ReadLine();
@@ -86,15 +92,21 @@ namespace Examen
             attackSpeed = float.Parse(Console.ReadLine());
             Console.WriteLine("Introducir el precio:");
             price = float.Parse(Console.ReadLine());
+            Console.WriteLine("Tipo de item:");
+            itemtype = Console.ReadLine();
 
-            Console.WriteLine("Introducir el daño:");
+            Console.WriteLine("Introducir el nombre del projectil:");
+            ammoname = Console.ReadLine();
+            Console.WriteLine("Introducir el daño del projectil:");
             ammoDamage = float.Parse(Console.ReadLine());
-            Console.WriteLine("Introducir el precio:");
+            Console.WriteLine("Introducir el precio del projectil:");
             ammoPrice = float.Parse(Console.ReadLine());
+            Console.WriteLine("Tipo de item del projectil:");
+            ammoitemtype = Console.ReadLine();
 
-            Arrow arrow = new Arrow(ammoDamage, ammoPrice);
+            Arrow arrow = new Arrow(ammoname,ammoDamage, ammoPrice,ammoitemtype);
 
-            weapons.Add(new Bow(name, damage, attackSpeed, price, arrow));
+            weapons.Add(new Bow(name, damage, attackSpeed, price, arrow,itemtype));
 
         }
 
@@ -104,8 +116,11 @@ namespace Examen
             float damage;
             float attackSpeed;
             float price;
+            string itemtype;
+            string ammoname;
             float ammoDamage;
             float ammoPrice;
+            string ammoitemtype;
 
             Console.WriteLine("Introducir el nombre:");
             name = Console.ReadLine();
@@ -115,15 +130,23 @@ namespace Examen
             attackSpeed = float.Parse(Console.ReadLine());
             Console.WriteLine("Introducir el precio:");
             price = float.Parse(Console.ReadLine());
+            Console.WriteLine("Tipo de item:");
+            itemtype = Console.ReadLine();
 
-            Console.WriteLine("Introducir el daño:");
+
+            Console.WriteLine("Introducir el nombre del projectile:");
+            ammoname = Console.ReadLine();
+            Console.WriteLine("Introducir el daño del projectile:");
             ammoDamage = float.Parse(Console.ReadLine());
-            Console.WriteLine("Introducir el precio:");
+            Console.WriteLine("Introducir el precio del projectile:");
             ammoPrice = float.Parse(Console.ReadLine());
 
-            Bullet bullet = new Bullet(ammoDamage, ammoPrice);
+            Console.WriteLine("Tipo de item del projectile:");
+            ammoitemtype = Console.ReadLine();
 
-            weapons.Add(new Gun(name, damage, attackSpeed, price, bullet));
+            Bullet bullet = new Bullet(ammoname,ammoDamage, ammoPrice,ammoitemtype);
+
+            weapons.Add(new Gun(name, damage, attackSpeed, price, bullet,itemtype));
 
         }
 

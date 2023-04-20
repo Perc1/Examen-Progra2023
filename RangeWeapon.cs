@@ -10,7 +10,7 @@ namespace Examen
     {
         protected Ammo ammo;
 
-        protected RangeWeapon(string name, float damage, float attackSpeed, float price, Ammo ammo) : base(name, damage, attackSpeed, price)
+        protected RangeWeapon(string name, float damage, float attackSpeed, float price, Ammo ammo, string itemtype) : base(name, damage, attackSpeed, price,itemtype)
         {
             this.ammo = ammo;
         }
