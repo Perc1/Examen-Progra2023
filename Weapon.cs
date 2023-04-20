@@ -6,13 +6,32 @@ using System.Threading.Tasks;
 
 namespace Examen
 {
-    class Weapon
+    abstract class Weapon : Item, IDetails
     {
-        int damage;
+        protected string name;
+        protected float damage;
+        protected float attackSpeed;
 
-        public Weapon(int damage)
+        protected Weapon(string name, float damage, float attackSpeed, float price) : base(price)
         {
+            this.name = name;
             this.damage = damage;
+            this.attackSpeed = attackSpeed;
+        }
+
+        protected virtual float GetDamagePerSecond()
+        {
+            return damage * attackSpeed;
+        }
+
+        protected virtual float GetPrice()
+        {
+            return price;
+        }
+
+        public string GetDetails()
+        {
+            return $"{name}: tiene {GetDamagePerSecond()} de daño por segundo y su precio total es de {GetPrice()}";
         }
     }
 }
