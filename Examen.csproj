@@ -50,6 +50,7 @@
     <Compile Include="Arrow.cs" />
     <Compile Include="Bow.cs" />
     <Compile Include="Bullet.cs" />
+    <Compile Include="ConvoList.cs" />
     <Compile Include="Enemigo.cs" />
     <Compile Include="Form1.cs">
       <SubType>Form</SubType>
