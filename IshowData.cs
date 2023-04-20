@@ -4,9 +4,11 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace Examen
+namespace ExamenProgra
 {
-    class Items
+    internal interface IshowData
     {
+        string ShowData();
+        string GetDetails();
     }
 }

@@ -4,20 +4,21 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace Examen
+namespace ExamenProgra
 {
-    class Enemigo : NPC
+    class Player : IshowData
     {
+        string name;
         List<Item> items = new List<Item>();
         float experience;
         int level;
-        float damage;
+        float money;
 
-
-        public virtual float GetDamage(float damage)
+        
+        public virtual string GetName(string name)
         {
-            this.damage = damage;
-            return damage;
+            this.name = name;
+            return name;
         }
 
         public virtual float GetExperience(float experience)
@@ -34,11 +35,12 @@ namespace Examen
 
         public string ShowData()
         {
-            return "Daño: " + damage + "  " + "Experiencia: " + experience + "   " +" Nivel: " + level;
+            return "Nombre: " + name + " " + "Experiencia: " + experience + " " + "Nivel: " + level;
         }
-        public void GetItem(Item item)
+        public void GetItem(Items item)
         {
             items.Add(item);
         }
     }
+
 }

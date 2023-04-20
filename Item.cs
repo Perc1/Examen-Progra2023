@@ -8,11 +8,23 @@ namespace Examen
 {
     abstract class Item
     {
-        protected float price;
+        public string name;
+        public string itemtype;
+        float price;
 
-        protected Item(float price)
+        public Item(string name, string itemtype, float price)
         {
+            this.name = name;
+            this.itemtype = itemtype;
             this.price = price;
         }
+
+        public virtual void Datos()
+        {
+            Console.WriteLine("Item Name: " + name);
+            Console.WriteLine("Item Type: " + itemtype);
+            Console.WriteLine("Item Price: " + price);
+        }
+
     }
 }
