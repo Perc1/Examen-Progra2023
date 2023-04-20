@@ -9,11 +9,12 @@ namespace Examen
     abstract class Ammo : Item
     {
         protected float damage;
+        protected float price;
 
         public float Damage { get { return damage; } }
         public float Price { get { return price; } }
 
-        protected Ammo(float damage, float price) : base(price)
+        protected Ammo(string name,float damage, float price, string itemtype) : base(name,itemtype,price)
         {
             this.damage = damage;
         }
