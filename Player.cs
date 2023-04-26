@@ -14,7 +14,14 @@ namespace Examen
         int level;
         float money;
 
-        
+        public Player(string name, float experience, int level, float money)
+        {
+            this.name = name;
+            this.experience = experience;
+            this.level = level;
+            this.money = money;
+        }
+
         public virtual string GetName(string name)
         {
             this.name = name;
