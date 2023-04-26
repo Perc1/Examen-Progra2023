@@ -6,7 +6,8 @@ using System.Threading.Tasks;
 
 namespace Examen
 {
-    abstract class Weapon : Item, IDetails
+    abstract class Weapon : Item
+
     {
         protected string name;
         protected string itemtype;

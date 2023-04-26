@@ -10,8 +10,9 @@ namespace Examen
     {
         static void Main(string[] args)
         {
-            Menu menu = new Menu();
-            menu.Execute();
+            //*Menu menu = new Menu();
+            //*menu.Execute();
+            Console.ReadLine();
         }
     }
 }
