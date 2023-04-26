@@ -37,7 +37,12 @@ namespace Examen
         {
             return "Nombre: " + name + " " + "Experiencia: " + experience + " " + "Nivel: " + level;
         }
-        public void GetItem(Items item)
+        public string GetDetails()
+        {
+            return "Nombre: " + name + " " + "Experiencia: " + experience + " " + "Nivel: " + level;
+        }
+
+        public void GetItem(Item item)
         {
             items.Add(item);
         }

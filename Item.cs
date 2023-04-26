@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace Examen
 {
-    abstract class Item
+    abstract class Item 
     {
         public string name;
         public string itemtype;
